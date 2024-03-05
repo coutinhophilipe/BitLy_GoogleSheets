@@ -51,7 +51,7 @@ function getClicksForLink(apiToken, linkId) {
   try {
     const response = UrlFetchApp.fetch(url, options);
     const result = JSON.parse(response.getContentText());
-    return result.total_clicks; // Ajuste conforme o campo correto da resposta
+    return result.total_clicks;
   } catch (e) {
     console.error('Erro ao obter cliques para o link: ', e);
     return 0; // Retorna 0 em caso de erro
